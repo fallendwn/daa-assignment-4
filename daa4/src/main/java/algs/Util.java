@@ -61,7 +61,7 @@ public class Util {
     }
 
 
-    public static ArrayList<ArrayList<Edge>> readJson(JsonNode json){
+    public static ArrayList<ArrayList<Edge>> readJsonWeighted(JsonNode json){
 
         int n = json.get("n").asInt();
         ArrayList<ArrayList<Edge>> list = new ArrayList<>();
@@ -79,6 +79,22 @@ public class Util {
         }
         return list;
 
+    }
+
+    public static ArrayList<ArrayList<Integer>> readJson(JsonNode json){
+
+        int n = json.get("n").asInt();
+        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+            for (int i = 0; i < n; i++){list.add(new ArrayList<>());}
+
+        for (JsonNode edge : json.get("edges")) {
+            int u = edge.get("u").asInt();
+            int v = edge.get("v").asInt();
+            list.get(u).add(v);
+        }
+        return list;
+
+    
     }
 
 }
