@@ -6,6 +6,8 @@ import java.util.Stack;
 public class Kosaraju{
 
     public ArrayList<ArrayList<Integer>> getSCC(ArrayList<ArrayList<Integer>> adj, int n){
+        Metrics.reset();
+        Metrics.startTimer();
 
         boolean[] visited = new boolean[n];
         Stack<Integer> stack = new Stack<>();
@@ -30,7 +32,7 @@ public class Kosaraju{
                 SCCList.add(component);
             }
         }
-
+        Metrics.stopTimer();
         return SCCList;
 
 

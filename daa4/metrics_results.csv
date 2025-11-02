@@ -1,0 +1,81 @@
+Kahn,0,16,8,0,0.421
+Shortest Path,0,0,0,11,0.010
+Kosaraju,19,1,0,0,-226378751.301
+Kahn,0,15,3,0,0.013
+Shortest Path,0,0,0,1,0.007
+Kosaraju,22,5,0,0,-226378771.693
+Kahn,0,15,3,0,0.016
+Shortest Path,0,0,0,2,0.007
+Kosaraju,23,5,0,0,-226378774.707
+Kahn,0,6,5,0,0.014
+Shortest Path,0,0,0,0,0.003
+Kosaraju,7,0,0,0,-226378786.620
+Kahn,0,6,5,0,0.013
+Shortest Path,0,0,0,2,0.004
+Kosaraju,7,0,0,0,-226378788.938
+Kahn,0,4,5,0,0.015
+Shortest Path,0,0,0,1,0.004
+Kosaraju,5,0,0,0,-226378791.403
+Kahn,0,24,9,0,0.021
+Shortest Path,0,0,0,2,0.008
+Kosaraju,36,5,0,0,-226378795.930
+Kahn,0,25,8,0,0.021
+Shortest Path,0,0,0,4,0.008
+Kosaraju,38,1,0,0,-226378799.031
+Kahn,0,33,5,0,0.021
+Shortest Path,0,0,0,0,0.005
+Kosaraju,47,7,0,0,-226378802.363
+Kahn,0,16,8,0,0.588
+Shortest Path,0,0,0,11,0.011
+Kosaraju,20,32,0,0,0.397
+Kahn,0,15,3,0,0.014
+Shortest Path,0,0,0,1,0.006
+Kosaraju,20,30,0,0,0.034
+Kahn,0,15,3,0,0.012
+Shortest Path,0,0,0,2,0.008
+Kosaraju,20,30,0,0,0.045
+Kahn,0,6,5,0,0.014
+Shortest Path,0,0,0,0,0.003
+Kosaraju,10,12,0,0,0.023
+Kahn,0,6,5,0,0.013
+Shortest Path,0,0,0,2,0.004
+Kosaraju,10,12,0,0,0.031
+Kahn,0,4,5,0,0.013
+Shortest Path,0,0,0,1,0.003
+Kosaraju,10,8,0,0,0.018
+Kahn,0,24,9,0,0.022
+Shortest Path,0,0,0,2,0.008
+Kosaraju,40,48,0,0,0.077
+Kahn,0,25,8,0,0.020
+Shortest Path,0,0,0,4,0.007
+Kosaraju,40,50,0,0,0.043
+Kahn,0,33,5,0,0.030
+Shortest Path,0,0,0,0,0.006
+Kosaraju,40,66,0,0,0.068
+Kahn,0,16,8,0,0.494
+Shortest Path,0,0,0,11,0.010
+Kosaraju,20,32,0,0,0.390
+Kahn,0,15,3,0,0.013
+Shortest Path,0,0,0,1,0.005
+Kosaraju,20,30,0,0,0.026
+Kahn,0,15,3,0,0.016
+Shortest Path,0,0,0,2,0.008
+Kosaraju,20,30,0,0,0.039
+Kahn,0,6,5,0,0.015
+Shortest Path,0,0,0,0,0.003
+Kosaraju,10,12,0,0,0.024
+Kahn,0,6,5,0,0.012
+Shortest Path,0,0,0,2,0.004
+Kosaraju,10,12,0,0,0.037
+Kahn,0,4,5,0,0.011
+Shortest Path,0,0,0,1,0.003
+Kosaraju,10,8,0,0,0.020
+Kahn,0,24,9,0,0.018
+Shortest Path,0,0,0,2,0.008
+Kosaraju,40,48,0,0,0.070
+Kahn,0,25,8,0,0.023
+Shortest Path,0,0,0,4,0.008
+Kosaraju,40,50,0,0,0.066
+Kahn,0,33,5,0,0.023
+Shortest Path,0,0,0,0,0.005
+Kosaraju,40,66,0,0,0.092
