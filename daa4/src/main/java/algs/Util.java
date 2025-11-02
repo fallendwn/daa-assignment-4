@@ -19,17 +19,18 @@ public class Util {
     }
 
     public static void DFS1(ArrayList<ArrayList<Integer>> adj, boolean[] visited, int s, Stack<Integer> stack){
-
+        Metrics.incDFS();
         visited[s] = true;
         for(int i : adj.get(s)){
-
+            Metrics.incEdge();
             if(!visited[i]){
-
                 DFS1(adj, visited, i, stack);
+            
 
             }
 
         }
+
         stack.push(s);
 
     }
@@ -37,7 +38,9 @@ public class Util {
     public static void DFS2(ArrayList<ArrayList<Integer>> adj, boolean[] visited, int s, ArrayList<Integer> res) {
         visited[s] = true;
         res.add(s);
+        Metrics.incDFS();
         for (int v : adj.get(s)) {
+            Metrics.incEdge();
             if (!visited[v]) {
                 DFS2(adj, visited, v, res);
             }

@@ -11,7 +11,8 @@ public class ShortestPath {
     }
 
     public Map<Integer, Integer> shortestPath(ArrayList<ArrayList<Util.Edge>> list, ArrayList<Integer> topological, int n, int source){
-
+        Metrics.reset();
+        Metrics.startTimer();
         Map<Integer, Integer> distance = new HashMap<>();
         for(int i = 0 ; i < n ; i ++){
 
@@ -30,21 +31,23 @@ public class ShortestPath {
                     if(newDistance < distance.get(edge.to)){
 
                         distance.put(edge.to, newDistance);
-
+                        Metrics.incRelaxation();
                     }
 
                 }
 
             }
 
-        }
+        }  
+        Metrics.stopTimer();
         return distance;
 
     }
 
     
     public Map<Integer, Integer> LongestPath(ArrayList<ArrayList<Util.Edge>> list, ArrayList<Integer> topological, int n, int source){
-
+        Metrics.reset();
+        Metrics.startTimer();
         Map<Integer, Integer> distance = new HashMap<>();
         for(int i = 0 ; i < n ; i ++){
 
@@ -61,7 +64,7 @@ public class ShortestPath {
 
                     int newDistance = distance.get(i) + edge.weight;
                     if(newDistance > distance.get(edge.to)){
-
+                        Metrics.incRelaxation();
                         distance.put(edge.to, newDistance);
 
                     }
@@ -71,6 +74,7 @@ public class ShortestPath {
             }
 
         }
+        Metrics.stopTimer();
         return distance;
 
     }

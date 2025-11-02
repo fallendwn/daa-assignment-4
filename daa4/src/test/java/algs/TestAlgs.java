@@ -25,7 +25,7 @@ public class TestAlgs {
         for (int i = 1; i <= 3; i++) {
             String inputPath = "json/graph_medium" + i + ".json";
             String outputPath = "json/output_medium" + i + ".json";
-        runTest(inputPath, outputPath);
+            runTest(inputPath, outputPath);
         }
     }
 
@@ -34,7 +34,7 @@ public class TestAlgs {
         for (int i = 1; i <= 3; i++) {
             String inputPath = "json/graph_large" + i + ".json";
             String outputPath = "json/output_large" + i + ".json";
-        runTest(inputPath, outputPath);
+            runTest(inputPath, outputPath);
         }
     }
 
@@ -46,17 +46,21 @@ public class TestAlgs {
         ArrayList<ArrayList<Util.Edge>> weightedList = Util.readJsonWeighted(json);
         ArrayList<ArrayList<Integer>> unweightedList = Util.readJson(json);
         int n = json.get("n").asInt();
-
         int src = json.has("source") ? json.get("source").asInt() : 0;
+
 
         Kahn kahn = new Kahn();
         ArrayList<Integer> topological = kahn.KahnSort(Util.readJson(json), n);
+        MetricsExport.writeCSV("metrics_results.csv", "Kahn");
 
         ShortestPath sp = new ShortestPath();
         ShortestPath.ResultFromSP resultSP = sp.computeEverything(weightedList, topological, n, src);
+        MetricsExport.writeCSV("metrics_results.csv", "Shortest Path");
 
         Kosaraju kosaraju = new Kosaraju();
         ArrayList<ArrayList<Integer>> scc = kosaraju.getSCC(unweightedList, n);
+        MetricsExport.writeCSV("metrics_results.csv", "Kosaraju");
+        
         ObjectNode result = mapper.createObjectNode();
         result.put("n", n);
         result.put("source", src);

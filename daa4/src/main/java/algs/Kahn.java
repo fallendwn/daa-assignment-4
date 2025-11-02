@@ -5,11 +5,15 @@ import java.util.Queue;
 public class Kahn {
     
     public ArrayList<Integer> KahnSort(ArrayList<ArrayList<Integer>> list, int n){
-
+        Metrics.reset();
+        Metrics.startTimer();
         int[] index = new int[n];
         for(int i = 0; i < n ; i++){
 
-            for(int j : list.get(i)) {index[j]++;}
+            for(int j : list.get(i)) {
+                index[j]++;
+                Metrics.incEdge();
+            }
 
         }
 
@@ -28,6 +32,8 @@ public class Kahn {
 
             int i = queue.poll();
             result.add(i);
+
+            Metrics.incQueue();
             for(int j : list.get(i)){
 
                 index[j]--;
@@ -40,7 +46,7 @@ public class Kahn {
             }
 
         }
-
+        Metrics.stopTimer();
         return result;
 
     }
