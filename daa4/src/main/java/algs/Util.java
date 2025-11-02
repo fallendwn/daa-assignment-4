@@ -1,18 +1,18 @@
 package algs;
 import java.util.ArrayList;
 import java.util.Stack;
+
+import com.fasterxml.jackson.databind.JsonNode;
 public class Util {
     
     public static class Edge{
 
-        int u;
-        int v;
-        int w;
-        public Edge(int u, int v, int w){
+        public int to;
+        public int weight;
+        public Edge(int v, int w){
 
-            this.u = u;
-            this.v = v;
-            this.w = w;
+            this.to = v;
+            this.weight = w;
 
         }
 
@@ -58,6 +58,27 @@ public class Util {
             }
         }
         return res;
+    }
+
+
+    public static ArrayList<ArrayList<Edge>> readJson(JsonNode json){
+
+        int n = json.get("n").asInt();
+        ArrayList<ArrayList<Edge>> list = new ArrayList<>();
+        for(int i = 0 ; i < n ; i ++){
+
+            list.add(new ArrayList<>());
+
+        } 
+        for(JsonNode edge : json.get("edges")){
+
+            int u = edge.get("u").asInt();
+            int v = edge.get("v").asInt();
+            int w = edge.get("w").asInt();
+            list.get(u).add(new Edge(v,w));
+        }
+        return list;
+
     }
 
 }
