@@ -66,4 +66,4 @@ Package <strong>algs</strong>
 </ul>
 
 <h2>Test Results</h2>
-![test results](image.png)
+<img src="image.png" alt="Test results" width="600"/>
